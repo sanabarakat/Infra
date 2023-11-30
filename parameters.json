@@ -5,12 +5,13 @@
       "acrName": {
         "value": "sbarakat"
       },
-      "acrLocation": {
+      "location": {
         "value": "Brazil South"
       },
       "appServicePlanName":{ 
         "value": "sbarakat-appserviceplan"
-      }
+      },
+
   }
 }
   

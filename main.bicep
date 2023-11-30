@@ -1,9 +1,7 @@
 param acrName string 
-param acrLocation string = 'Brazil South'
 param appServicePlanName string
-param appServicePlanLocation string = 'Brazil South'
 param webAppName string ='sbarakat-webapp'
-param webAppLocation string = 'Brazil South'
+param location string = 'Brazil South'
 param containerRegistryImageName string = 'flask-demo'
 param containerRegistryImageVersion string = 'latest'
 param DOCKER_REGISTRY_SERVER_USERNAME string 
@@ -14,7 +12,7 @@ module registry './ResourceModules-main/modules/container-registry/registry/main
   name: acrName
   params: {
     name: acrName
-    location: acrLocation
+    location: location
     acrAdminUserEnabled: true
   }
 }
@@ -23,7 +21,7 @@ module serverfarm './ResourceModules-main/modules/web/serverfarm/main.bicep' = {
   name: '${appServicePlanName}-deploy'
   params: {
     name: appServicePlanName
-    location: appServicePlanLocation
+    location: location
     sku: {
       capacity: 1
       family: 'B'
@@ -40,7 +38,7 @@ module site './ResourceModules-main/modules/web/site/main.bicep' = {
   params: {
     kind: 'app'
     name: webAppName
-    location: webAppLocation
+    location: location
     serverFarmResourceId: resourceId('Microsoft.Web/serverfarms', appServicePlanName)
     siteConfig: {
       linuxFxVersion: 'DOCKER|${acrName}.azurecr.io/${containerRegistryImageName }:${containerRegistryImageVersion}'
