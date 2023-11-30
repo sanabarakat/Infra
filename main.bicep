@@ -7,6 +7,7 @@ param containerRegistryImageVersion string = 'latest'
 param DOCKER_REGISTRY_SERVER_USERNAME string 
 @secure()
 param DOCKER_REGISTRY_SERVER_PASSWORD string
+param DOCKER_REGISTRY_SERVER_URL string 
 
 module registry './ResourceModules-main/modules/container-registry/registry/main.bicep' = {
   name: acrName
@@ -46,7 +47,7 @@ module site './ResourceModules-main/modules/web/site/main.bicep' = {
     }
     appSettingsKeyValuePairs : {
       WEBSITES_ENABLE_APP_SERVICE_STORAGE: false
-      DOCKER_REGISTRY_SERVER_URL: 'https://${acrName}.azurecr.io'
+      DOCKER_REGISTRY_SERVER_URL: DOCKER_REGISTRY_SERVER_URL 
       DOCKER_REGISTRY_SERVER_USERNAME: DOCKER_REGISTRY_SERVER_USERNAME
       DOCKER_REGISTRY_SERVER_PASSWORD: DOCKER_REGISTRY_SERVER_PASSWORD
     }
