@@ -1,4 +1,4 @@
-name: Deploy Bicep Template
+name: Deploy Bicep
 
 on:
   push:
