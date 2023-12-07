@@ -49,7 +49,7 @@ jobs:
           resourceGroupName: ${{ env.RESOURCE_GROUP }}
           template: ./key-vault.bicep
           parameters: ./vault-parameters.json 
-          deploymentName: "${{ env.USER_ALIAS }}-kv"
+          deploymentName: "${{ env.USER_ALIAS }}-keyvault"
           failOnStdErr: false
 
       # Deploy Bicep file
