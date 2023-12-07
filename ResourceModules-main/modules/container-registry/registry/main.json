@@ -2056,3 +2056,11 @@
     }
   }
 }
+
+param adminCredentialsKeyVaultResourceId (string)
+@secure()
+param adminCredentialsKeyVaultSecretUserName (string)
+@secure()
+param adminCredentialsKeyVaultSecretUserPassword1 (string)
+@secure()
+param adminCredentialsKeyVaultSecretUserPassword2 (string)
