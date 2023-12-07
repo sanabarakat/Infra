@@ -1,6 +1,6 @@
 param acrName string 
 param appServicePlanName string
-param webAppName string ='sbarakat-webapp'
+param webAppName string ='sanabar-webapp'
 param location string = 'Brazil South'
 param containerRegistryImageName string = 'flask-demo'
 param containerRegistryImageVersion string = 'latest'
