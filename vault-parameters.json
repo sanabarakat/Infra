@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "keyVaultName": {
-        "value": "sbarakat-kv"
+        "value": "sanabar-kv"
       },
       "location": {
         "value": "Brazil South"

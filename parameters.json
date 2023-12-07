@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "acrName": {
-        "value": "sbarakat-registry"
+        "value": "sanabar-registry"
       },
       "location": {
         "value": "Brazil South"
       },
       "appServicePlanName":{ 
-        "value": "sbarakat-appserviceplan"
+        "value": "sanabar-appserviceplan"
       }
 
   }
