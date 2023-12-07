@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "acrName": {
-        "value": "sanabarakat-registry"
+        "value": "sbarakat-registry"
       },
       "location": {
         "value": "Brazil South"
