@@ -4,7 +4,7 @@ param acrName string
 param keyVaultSecretNameACRUsername string ='acr-username'
 param keyVaultSecretNameACRPassword1 string ='acr-password1'
 
-module keyvault './ResourceModules-main/modules/key-vault/vault/main.bicep' = {
+module keyvault './ResourceModules-main/ResourceModules-main/modules/key-vault/vault/main.bicep' = {
   name: keyVaultName
   params: {
     name: keyVaultName
@@ -20,7 +20,7 @@ module keyvault './ResourceModules-main/modules/key-vault/vault/main.bicep' = {
   }
 }
 
-module acr './ResourceModules-main/modules/container-registry/registry/main.bicep' = {
+module acr './ResourceModules-main/ResourceModules-main/modules/container-registry/registry/main.bicep' = {
   name: acrName
   dependsOn: [
     keyvault
