@@ -18,7 +18,7 @@ resource acr 'Microsoft.ContainerRegistry/registries@2023-07-01' existing = {
   name: acrName
  }
 
-module serverfarm './ResourceModules-main/modules/web/serverfarm/main.bicep' = {
+module serverfarm './ResourceModules-main/ResourceModules-main/modules/web/serverfarm/main.bicep' = {
   name: '${appServicePlanName}-deploy'
   params: {
     name: appServicePlanName
@@ -35,7 +35,7 @@ module serverfarm './ResourceModules-main/modules/web/serverfarm/main.bicep' = {
 }
 
 // Azure Web App for Linux containers module
-module site './ResourceModules-main/modules/web/site/main.bicep' = {
+module site './ResourceModules-main/ResourceModules-main/modules/web/site/main.bicep' = {
   name: webAppName
   dependsOn: [
     serverfarm
