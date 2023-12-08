@@ -12,7 +12,7 @@ env:
   USER_ALIAS: sanabar
   KEY_VAULT_SECRET_NAME_ACR_USERNAME: keyVaultSecretNameACRUsername
   KEY_VAULT_SECRET_NAME_ACR_PASSWORD: keyVaultSecretNameACRPassword1
-  KEY_VAULT_NAME: sanabar-keyvault
+  KEY_VAULT_NAME: sanabar-kv1
 
 
 jobs:
