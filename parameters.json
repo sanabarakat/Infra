@@ -11,7 +11,7 @@
       "appServicePlanName":{ 
         "value": "sanabar-appserviceplan"
       },
-      "KeyVaultName": {
+      "keyVaultName": {
         "value": "sanabar-kv1"
       }
 
