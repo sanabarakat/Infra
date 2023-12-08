@@ -10,6 +10,9 @@
       },
       "appServicePlanName":{ 
         "value": "sanabar-appserviceplan"
+      },
+      "KeyVaultName": {s
+        "value": "sanabar-kv"
       }
 
   }
