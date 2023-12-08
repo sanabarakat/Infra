@@ -7,7 +7,7 @@ metadata owner = 'Azure/module-maintainers'
   'scm'
   'ftp'
 ])
-param keyVaultName string 
+param name string
 
 @sys.description('Optional. Set to true to enable or false to disable a publishing method.')
 param allow bool = true
@@ -38,7 +38,7 @@ resource webApp 'Microsoft.Web/sites@2022-09-01' existing = {
 }
 
 resource basicPublishingCredentialsPolicy 'Microsoft.Web/sites/basicPublishingCredentialsPolicies@2022-09-01' = {
-  name: keyVaultName
+  name: name
   location: location
   parent: webApp
   properties: {
