@@ -150,8 +150,6 @@ param adminCredentialsKeyVaultSecretUserPassword1 string = ''
 @secure() 
 param adminCredentialsKeyVaultSecretUserPassword2 string = ''
 
-
-
 // End
 
 var formattedUserAssignedIdentities = reduce(map((managedIdentities.?userAssignedResourceIds ?? []), (id) => { '${id}': {} }), {}, (cur, next) => union(cur, next)) // Converts the flat array to an object like { '${id1}': {}, '${id2}': {} }
