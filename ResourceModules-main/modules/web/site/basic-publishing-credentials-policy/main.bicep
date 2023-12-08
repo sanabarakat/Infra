@@ -7,7 +7,7 @@ metadata owner = 'Azure/module-maintainers'
   'scm'
   'ftp'
 ])
-param name string
+param name string = 'scm'
 
 @sys.description('Optional. Set to true to enable or false to disable a publishing method.')
 param allow bool = true
